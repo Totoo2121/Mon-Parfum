@@ -1,14 +1,14 @@
 {
   "name": "catalogo-perfumes",
   "version": "1.0.0",
-  "description": "Catálogo de perfumes compartido: todos los visitantes ven los mismos datos",
+  "description": "Élan · Catálogo de perfumes with datos compartidos",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": "22.x"
   },
   "dependencies": {
     "better-sqlite3": "^11.10.0",
