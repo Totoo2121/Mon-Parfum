@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Élan · Perfumería a domicilio</title><style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+:root{--ink:#111;--cream:#fff;--paper:#fff;--peach:#f1f1f1;--coral:#111;--muted:#707070;--line:#dedede}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',Arial,sans-serif}.wrap{max-width:1160px;margin:auto;padding:0 24px}header{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.logo{font:600 27px 'Playfair Display',serif;letter-spacing:.06em}.logo small{font:10px 'DM Sans';letter-spacing:.16em;text-transform:uppercase;color:var(--coral);display:block;margin-top:-3px}.nav{display:flex;gap:22px;align-items:center;font-size:13px}.nav a{color:var(--ink);text-decoration:none}.admin-link{border:0;background:none;color:var(--muted);font-size:12px;cursor:pointer}.cart-btn{border:0;background:var(--ink);color:#fff;padding:12px 17px;border-radius:4px;cursor:pointer;font-weight:600}.hero{display:grid;grid-template-columns:1fr 1.08fr;gap:24px;padding:30px 0 26px}.hero-copy{background:var(--peach);padding:50px 45px;min-height:365px;display:flex;flex-direction:column;justify-content:center}.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#8b4f3f;font-weight:700}.hero h1{font:500 clamp(42px,6vw,68px)/.98 'Playfair Display',serif;margin:16px 0}.hero p{color:#614f48;line-height:1.6;max-width:390px;margin:0 0 24px}.primary{display:inline-block;background:var(--ink);color:#fff;padding:14px 20px;text-decoration:none;font-size:12px;font-weight:700;border-radius:3px;width:max-content}.hero-photo{background:url('assets/1.png') center/cover;min-height:365px;position:relative}.hero-photo span{position:absolute;bottom:18px;left:20px;background:#fff;padding:10px 13px;font-size:11px;font-weight:700}.promo{background:var(--ink);color:#fff;display:flex;justify-content:space-between;align-items:center;padding:20px 28px;margin:0 0 42px;border-radius:3px}.promo b{color:#f1c3ad;font-size:21px}.promo span{font-size:13px;color:#ddd}.promo a{color:#fff;text-decoration:underline;font-size:12px}.heading{display:flex;justify-content:space-between;align-items:end;margin-bottom:18px}.heading h2{font:500 34px 'Playfair Display',serif;margin:0}.heading small{color:var(--muted)}.filters{display:flex;gap:9px;margin-bottom:22px;overflow:auto}.filter{border:1px solid #d9cec5;background:transparent;color:var(--muted);padding:9px 14px;border-radius:20px;white-space:nowrap;cursor:pointer}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}.products{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;padding-bottom:60px}.product{background:#fff;position:relative}.product.hide{display:none}.product-img{height:240px;background:center/cover}.product-body{padding:15px}.badge{position:absolute;top:11px;left:11px;background:var(--coral);color:#fff;font-size:10px;padding:6px 8px;font-weight:700}.brand{font-size:10px;text-transform:uppercase;letter-spacing:.12em;color:var(--coral);font-weight:700}.product h3{margin:5px 0 4px;font:500 21px 'Playfair Display',serif}.desc{font-size:12px;color:var(--muted);height:33px}.price-row{display:flex;align-items:center;justify-content:space-between;margin-top:13px}.price{font-weight:700}.add{background:var(--ink);color:white;border:0;width:30px;height:30px;border-radius:50%;font-size:19px;cursor:pointer}.steps{border-top:1px solid var(--line);padding:42px 0 55px}.steps h2{font:500 32px 'Playfair Display',serif;margin:0 0 28px}.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{background:#fff;padding:24px}.num{color:var(--coral);font-weight:700}.step h3{margin:14px 0 7px;font-size:16px}.step p{font-size:13px;line-height:1.6;color:var(--muted);margin:0}.footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px;display:flex;justify-content:space-between}.login-modal{position:fixed;inset:0;background:#000b;z-index:6;display:none;padding:25px}.login-modal.open{display:block}.login-box{background:#fff;max-width:390px;margin:15vh auto;padding:25px}.login-input{width:100%;border:1px solid #bbb;padding:13px;font:inherit;margin:18px 0 10px}.login-submit{border:0;cursor:pointer;width:100%;justify-content:center}.login-error{color:#111;font-size:12px;min-height:18px}.admin-modal{position:fixed;inset:0;background:#0009;z-index:5;display:none;padding:25px}.admin-modal.open{display:block}.admin-box{background:#fff;max-width:650px;margin:4vh auto;padding:25px;max-height:90vh;overflow:auto}.admin-help{color:var(--muted);font-size:13px}.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:20px 0}.admin-form input{border:1px solid var(--line);padding:12px;font:inherit}.admin-form .primary{border:0;cursor:pointer}.admin-row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding:12px 0;font-weight:600;font-size:13px}.admin-row small{display:block;color:var(--muted);font-weight:400;margin-top:3px}.admin-row button{border:1px solid #d7b0a3;background:none;color:var(--coral);padding:7px 10px;cursor:pointer}.drawer{position:fixed;inset:0;background:#0006;z-index:3;display:none}.drawer.open{display:block}.panel{background:#fff;width:min(420px,100%);height:100%;margin-left:auto;padding:25px;overflow:auto}.panel-head{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding-bottom:18px}.panel h2{font:500 28px 'Playfair Display',serif;margin:0}.close{border:0;background:none;font-size:25px;cursor:pointer}.cart-item{display:flex;gap:12px;border-bottom:1px solid var(--line);padding:15px 0;align-items:center}.cart-item img{width:62px;height:70px;object-fit:cover}.cart-item strong{font-family:'Playfair Display',serif;font-size:17px}.cart-item small{display:block;color:var(--muted);margin-top:4px}.qty{margin-left:auto;display:flex;gap:8px;align-items:center}.qty button{border:1px solid var(--line);background:white;width:25px;height:25px}.total{display:flex;justify-content:space-between;font-size:18px;font-weight:700;margin:22px 0}.whatsapp{display:block;text-align:center;background:#25a85a;color:#fff;text-decoration:none;padding:15px;font-weight:700;border-radius:3px;font-size:13px}.empty{color:var(--muted);text-align:center;padding:50px 0}
+.real-catalog{border-top:1px solid var(--line);padding:42px 0 55px}.catalog-note{color:var(--muted);font-size:13px;margin:-7px 0 22px}.catalog-images{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.catalog-images img{width:100%;display:block;background:#111;cursor:pointer;transition:.25s}.catalog-images img:hover{transform:translateY(-3px);box-shadow:0 10px 25px #0002}@media(max-width:750px){.nav a:not(.cart-btn){display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:36px 28px}.hero-photo{min-height:280px}.products{grid-template-columns:repeat(2,1fr);gap:10px}.product-img{height:205px}.promo{display:block}.promo a{display:block;margin-top:12px}.step-grid{grid-template-columns:1fr}.footer{display:block;line-height:2}.heading h2{font-size:28px}}
+:root{--ink:#fff;--cream:#050505;--paper:#111;--peach:#161616;--coral:#fff;--muted:#a6a6a6;--line:#292929}body{background:#050505;color:#fff}.wrap{max-width:1240px}header{border-color:#292929}.logo{color:#fff}.logo small{color:#aaa}.nav a{color:#e9e9e9}.admin-link{color:#aaa}.cart-btn,.primary{background:#fff;color:#050505;border-radius:30px;padding:13px 21px;transition:.2s;box-shadow:0 0 0 1px #fff}.cart-btn:hover,.primary:hover{background:#cfcfcf;transform:translateY(-2px);box-shadow:0 8px 20px #fff2}.hero{padding-top:38px}.hero-copy{background:#111;border:1px solid #292929;border-radius:18px;padding:55px}.kicker,.brand{color:#aaa}.gender-label{display:inline-block;margin-top:8px;border:1px solid #555;border-radius:12px;padding:4px 8px;font-size:9px;letter-spacing:.13em;color:#aaa}.hero h1{color:#fff}.hero p{color:#bdbdbd}.hero-photo{border-radius:18px;filter:none}.hero-photo span{background:#fff;color:#111;border-radius:20px}.promo{background:#fff;color:#080808;border-radius:14px}.promo b{color:#111}.promo span{color:#555}.promo a{color:#111}.heading{border-color:#292929}.heading small{color:#999}.filters{gap:10px}.filter{border-color:#333;color:#aaa;background:#0d0d0d;border-radius:24px;padding:10px 17px;transition:.2s}.filter.active,.filter:hover{background:#fff;color:#050505;border-color:#fff}.product{background:#111;border:1px solid #292929;border-radius:14px;overflow:hidden;transition:.25s}.product:hover{transform:translateY(-5px);border-color:#666;box-shadow:0 15px 35px #000}.product-img{filter:none;background-color:#fff}.product h3{color:#fff}.desc{color:#999}.price{color:#fff}.add{background:#fff;color:#111;width:36px;height:36px;transition:.2s}.add:hover{background:#bbb;transform:scale(1.08)}.badge{background:#fff;color:#111;border-radius:14px}.real-catalog,.steps{border-color:#292929}.catalog-images img{filter:none;border:1px solid #292929;border-radius:12px}.step{background:#111;border:1px solid #292929;border-radius:14px}.num{color:#fff}.step p{color:#aaa}.footer{border-color:#292929}.panel,.admin-box,.login-box{background:#111;color:#fff;border:1px solid #333}.panel-head{border-color:#333}.close{color:#fff}.cart-item{border-color:#333}.cart-item small,.admin-help{color:#aaa}.total{color:#fff}.login-input,.admin-form input{background:#050505;color:#fff;border-color:#444;border-radius:5px}.admin-row{border-color:#333}.admin-row button{background:#fff;color:#111;border:0;border-radius:18px}.whatsapp{border-radius:25px;background:#fff;color:#111}.empty{color:#999}@media(max-width:750px){.hero-copy{padding:38px 25px}.products{grid-template-columns:repeat(2,1fr)}}
+.detail-modal{position:fixed;inset:0;background:#000d;z-index:8;display:none;padding:20px}.detail-modal.open{display:flex;align-items:center;justify-content:center}.detail-box{position:relative;background:#111;border:1px solid #444;max-width:760px;width:100%;display:grid;grid-template-columns:45% 55%;overflow:hidden;border-radius:16px;box-shadow:0 20px 60px #000}.detail-box>img{width:100%;height:100%;min-height:440px;object-fit:cover;filter:none;background:#fff}.detail-content{padding:42px}.detail-content h2{font:500 40px 'Playfair Display',serif;margin:12px 0;color:#fff}.detail-price{font-size:20px;font-weight:700}.detail-divider{border-top:1px solid #333;margin:25px 0}.detail-content h4{font-size:11px;text-transform:uppercase;letter-spacing:.14em;margin:18px 0 7px}.detail-content p{color:#aaa;line-height:1.65;font-size:14px;margin:0}.detail-close{position:absolute;right:14px;top:10px;background:#fff;color:#111;border:0;border-radius:50%;font-size:25px;width:34px;height:34px;z-index:1;cursor:pointer}.detail-add{border:0;cursor:pointer;margin-top:28px}@media(max-width:650px){.detail-box{grid-template-columns:1fr;max-height:90vh;overflow:auto}.detail-box>img{min-height:230px;height:230px}.detail-content{padding:25px}.detail-content h2{font-size:32px}}
+.admin-logout{background:none;border:1px solid #444;color:#aaa;border-radius:20px;padding:8px 12px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;margin-right:8px}.admin-logout:hover{color:#fff;border-color:#fff}.admin-modal{background:rgba(0,0,0,.82);backdrop-filter:blur(8px);padding:16px}.admin-box{max-width:760px;margin:3vh auto;padding:0;background:#0d0d0d;border:1px solid #333;border-radius:18px;overflow-x:hidden;overflow-y:auto;max-height:90vh;box-shadow:0 25px 80px #000}.admin-box .panel-head{padding:24px 28px;background:#151515;border-bottom:1px solid #292929;position:sticky;top:0;z-index:1}.admin-box .panel-head h2{font-size:30px}.admin-box .admin-help{padding:0 28px;margin:22px 0;color:#999}.admin-form{margin:0 28px 16px;padding:20px;background:#151515;border:1px solid #292929;border-radius:12px;display:grid;grid-template-columns:1fr 140px 1.2fr auto;align-items:center}.admin-form input{background:#0b0b0b;border:1px solid #393939;border-radius:7px;color:#fff;padding:13px 14px;min-width:0}.admin-form input:focus{outline:1px solid #fff;border-color:#fff}.admin-form .primary{padding:13px 18px;white-space:nowrap}.admin-search{display:block;margin:0 28px 16px;padding:12px 14px;width:calc(100% - 56px);background:#0b0b0b;border:1px solid #393939;border-radius:7px;color:#fff;font:inherit}.admin-search:focus{outline:1px solid #fff;border-color:#fff}.admin-box #adminList{padding:0 28px 28px}.admin-box #adminList:before{content:'Perfumes en el catálogo';display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#888;padding:0 0 12px}.admin-row{background:#151515;border:1px solid #292929;border-radius:10px;margin:8px 0;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.admin-row:hover{border-color:#666}.admin-row span{display:flex;align-items:center;gap:12px}.admin-row span:before{content:'✦';color:#fff;background:#252525;border-radius:50%;width:28px;height:28px;display:grid;place-items:center;flex-shrink:0}.admin-row small{margin:0;color:#aaa}.admin-row button{padding:8px 13px;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.stock-edit{display:flex;align-items:center;gap:8px;background:#0b0b0b;border:1px solid #292929;border-radius:20px;padding:4px}.stock-edit button{border:0;background:#232323;color:#fff;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:14px;line-height:1}.stock-edit button:hover{background:#333}.stock-edit b{min-width:20px;text-align:center;font-size:12px}.admin-row-edit{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:#151515;border:1px solid #555;border-radius:10px;margin:8px 0;padding:15px}.admin-row-edit input,.admin-row-edit select{background:#0b0b0b;border:1px solid #393939;border-radius:7px;color:#fff;padding:10px 12px;font:inherit;min-width:0}.admin-row-edit input:focus,.admin-row-edit select:focus{outline:1px solid #fff;border-color:#fff}.admin-row-edit>div{grid-column:1/-1;display:flex;gap:8px;justify-content:flex-end}.admin-row-edit .primary{padding:9px 16px;border:0;cursor:pointer}.admin-form textarea{grid-column:1/-1;background:#0b0b0b;border:1px solid #393939;border-radius:7px;color:#fff;padding:12px 14px;font:inherit;resize:vertical;min-height:44px}.admin-form textarea:focus{outline:1px solid #fff;border-color:#fff}.admin-row-edit textarea{grid-column:1/-1;background:#0b0b0b;border:1px solid #393939;border-radius:7px;color:#fff;padding:10px 12px;font:inherit;resize:vertical;min-height:40px}.admin-row-edit textarea:focus{outline:1px solid #fff;border-color:#fff}.img-drop{grid-column:1/-1;border:2px dashed #444;border-radius:10px;padding:16px;text-align:center;color:#999;font-size:12px;cursor:pointer;transition:.2s;background:#0b0b0b}.img-drop:hover{border-color:#777;color:#ccc}.img-drop.dragover{border-color:#fff;background:#1a1a1a;color:#fff}.img-drop-inner{pointer-events:none}.img-drop-thumb{max-width:100%;max-height:120px;border-radius:6px;pointer-events:none;object-fit:cover}@media(max-width:750px){.admin-form{grid-template-columns:1fr 1fr;margin:0 18px 16px}.admin-form input:first-child,.admin-form input:nth-child(3),.admin-form .primary{grid-column:1/-1}.admin-search{margin:0 18px 16px;width:calc(100% - 36px)}.admin-box .panel-head,.admin-box .admin-help,.admin-box #adminList{padding-left:18px;padding-right:18px}.admin-box .panel-head{padding-top:20px;padding-bottom:20px}.admin-row span:before{display:none}.admin-row-edit{grid-template-columns:1fr}}
+.add:disabled{opacity:.35;cursor:not-allowed}
+.stock-tag{display:block;margin-top:8px;font-size:11px;font-weight:600;color:#7fd992}
+.stock-tag.low{color:#e0b23d}
+.stock-tag.out{color:#e0716f}
+.admin-form{grid-template-columns:repeat(2,1fr)!important}
+.admin-form select{background:#0b0b0b;border:1px solid #393939;border-radius:7px;color:#fff;padding:13px 14px;font:inherit;min-width:0}
+.admin-form select:focus{outline:1px solid #fff;border-color:#fff}
+.admin-form .primary{grid-column:1/-1;justify-self:start}
+#detailStock{margin-top:8px;font-size:12px;font-weight:600;color:#7fd992}
+#detailStock.low{color:#e0b23d}
+#detailStock.out{color:#e0716f}
+@media(max-width:750px){.admin-form{grid-template-columns:1fr!important}}
+.footer .admin-link{text-decoration:underline;padding:0;font-size:12px}
+.footer .admin-link:hover{color:#fff}
+</style></head><body><div class="wrap"><header><a class="logo" href="#">Élan<small>perfumería</small></a><nav class="nav"><a href="#catalogo">Catálogo</a><a href="#como-pedir">Cómo pedir</a><button class="cart-btn" onclick="openCart()">🛍 Pedido (<span id="count">0</span>)</button></nav></header>
+<section class="hero"><div class="hero-copy"><div class="kicker">Fragancias de autor · Mendoza</div><h1>Más aroma,<br>menos vueltas.</h1><p>Elegí tu próxima fragancia desde casa. Te la llevamos a domicilio en Godoy Cruz y alrededores.</p><a class="primary" href="#catalogo">Ver catálogo ↓</a></div><div class="hero-photo"></div></section>
+<section id="catalogo"><div class="heading"><h2>Los más elegidos</h2><small><span id="shown">24</span> fragancias</small></div><div class="filters"><button class="filter active" onclick="filter('todos',this)">Todos</button><button class="filter" onclick="filter('mujeres',this)">Mujer</button><button class="filter" onclick="filter('hombres',this)">Hombre</button><button class="filter" onclick="filter('unisex',this)">Unisex</button></div><div class="products"></div></section><section id="como-pedir" class="steps"><h2>Cómo hacer un pedido</h2><div class="step-grid"><div class="step"><div class="num">01</div><h3>Elegí tus aromas</h3><p>Explorá el catálogo y agregá tus fragancias favoritas al pedido.</p></div><div class="step"><div class="num">02</div><h3>Revisá tu pedido</h3><p>Desde el botón de pedido podés ver cantidades y total estimado.</p></div><div class="step"><div class="num">03</div><h3>Recibilo en tu casa</h3><p>Completamos los datos por WhatsApp y coordinamos el envío.</p></div></div></section><footer class="footer"><span>© 2026 Élan Perfumería</span><span>Godoy Cruz · Mendoza · hola@elanperfumeria.com · <button class="admin-link" onclick="openAdmin()">Administrador</button></span></footer></div>
+<div class="drawer" id="drawer" onclick="if(event.target===this)closeCart()"><aside class="panel"><div class="panel-head"><h2>Tu pedido</h2><button class="close" onclick="closeCart()">×</button></div><div id="items"><div class="empty">Todavía no agregaste productos.</div></div><div class="total"><span>Total estimado</span><span id="total">$0</span></div><a class="whatsapp" id="wa" href="#" target="_blank">Enviar pedido por WhatsApp ↗</a></aside></div>
+<script>let cart=[];let currentFilter='todos';const fmt=n=>'$'+n.toLocaleString('es-AR');function stockFor(name){let p=(typeof perfumes!=='undefined'?perfumes:[]).find(x=>x.name===name);return p?p.stock:Infinity}function filter(cat,btn){currentFilter=cat;document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));btn.classList.add('active');applyFilter()}function applyFilter(){let n=0;document.querySelectorAll('.product').forEach(p=>{let show=currentFilter==='todos'||p.dataset.cat===currentFilter;p.classList.toggle('hide',!show);if(show)n++});document.getElementById('shown').textContent=n}function add(btn){if(window.event)window.event.stopPropagation();let p=btn.closest('.product').dataset;let max=stockFor(p.name);let found=cart.find(x=>x.name===p.name);let qty=found?found.qty:0;if(qty+1>max){alert('No hay más stock disponible de este perfume.');return}found?found.qty++:cart.push({name:p.name,price:+p.price,img:p.img,qty:1});render();openCart()}function change(name,delta){let x=cart.find(i=>i.name===name);if(delta>0&&x.qty+1>stockFor(name)){alert('No hay más stock disponible de este perfume.');return}x.qty+=delta;if(x.qty<1)cart=cart.filter(i=>i.name!==name);render()}function render(){document.getElementById('count').textContent=cart.reduce((a,x)=>a+x.qty,0);let total=cart.reduce((a,x)=>a+x.price*x.qty,0);document.getElementById('total').textContent=fmt(total);document.getElementById('items').innerHTML=cart.length?cart.map(x=>`<div class="cart-item"><img src="${x.img}"><div><strong>${x.name}</strong><small>${fmt(x.price)} · ${x.qty} un.</small></div><div class="qty"><button onclick="change('${x.name}',-1)">−</button><b>${x.qty}</b><button onclick="change('${x.name}',1)">+</button></div></div>`).join(''):'<div class="empty">Todavía no agregaste productos.</div>';let text='✨ *NUEVO PEDIDO — ÉLAN PERFUMERÍA*%0A%0AHola, quisiera consultar por este pedido:%0A%0A'+cart.map(x=>`• *${x.name}*%0A  Cantidad: ${x.qty}%0A  Precio: ${fmt(x.price*x.qty)}`).join('%0A%0A')+`%0A%0A━━━━━━━━━━━━%0A💰 *TOTAL ESTIMADO: ${fmt(total)}*%0A━━━━━━━━━━━━%0A%0A📍 Quisiera coordinar disponibilidad, forma de pago y entrega.%0A%0A¡Muchas gracias!`;document.getElementById('wa').href='https://wa.me/5492612578860?text='+text}function openCart(){document.getElementById('drawer').classList.add('open')}function closeCart(){document.getElementById('drawer').classList.remove('open')}render()</script><div class="detail-modal" id="detail" onclick="if(event.target===this)closeDetail()"><div class="detail-box"><button class="detail-close" onclick="closeDetail()">×</button><img id="detailImg"><div class="detail-content"><div class="brand">PERFUME IMPORTADO</div><h2 id="detailName"></h2><div class="detail-price" id="detailPrice"></div><span id="detailStock"></span><div class="detail-divider"></div><h4>Notas olfativas</h4><p id="detailNotes"></p><h4>¿A qué huele?</h4><p id="detailDesc"></p><button class="primary detail-add" id="detailAdd">Agregar al pedido +</button></div></div></div><script>function openDetail(el){let n=el.dataset.name,notes={"J’adore":'Ylang-ylang · Jazmín · Rosa · Vainilla',"La Vie Est Belle":'Iris · Jazmín · Pachulí · Praliné',"Angel":'Algodón de azúcar · Chocolate · Pachulí',"Narciso Rodriguez For Her":'Rosa · Almizcle · Ámbar · Madera',"Issey Miyake":'Loto · Rosa · Madera de sándalo',"CH Sublime":'Frutos rojos · Vainilla · Almizcle',"Libre Yves Saint Laurent":'Lavanda · Azahar · Vainilla · Cedro',"Lady Million Eau My Gold":'Manzana · Bergamota · Jazmín · Pachulí',"Nina Rouge":'Frambuesa · Gardenia · Caramelo · Vainilla',"Good Girl Elixir":'Almendra · Rosa · Vainilla · Cacao',"212 Sexy":'Pimienta rosa · Vainilla · Almizcle',"Invictus Victory":'Limón · Incienso · Haba tonka · Ámbar',"Bleu de Chanel":'Cítricos · Incienso · Cedro · Sándalo'}[n]||'Aromas frescos · Maderas · Especias suaves';document.getElementById('detailImg').src=el.dataset.img;document.getElementById('detailName').textContent=n;document.getElementById('detailPrice').textContent='$ '+(+el.dataset.price).toLocaleString('es-AR');document.getElementById('detailNotes').textContent=notes;document.getElementById('detailDesc').textContent='Una fragancia elegante y equilibrada, pensada para dejar una presencia agradable y duradera. Su aroma evoluciona suavemente sobre la piel y resulta ideal para usar todos los días o en ocasiones especiales.';document.getElementById('detailAdd').onclick=()=>{add(el);closeDetail()};document.getElementById('detail').classList.add('open')}function closeDetail(){document.getElementById('detail').classList.remove('open')}</script><script>// Capa de datos: los perfumes ahora vienen del SERVIDOR (base de datos
+// compartida), no de localStorage. Todos los visitantes ven lo mismo.
+let perfumes=[];let lastSnapshot='';
+function snapList(a){return JSON.stringify(a)}
+
+function applyServerList(list){
+  perfumes=list;
+  lastSnapshot=snapList(list);
+  renderProducts();
+  // Si el panel admin está abierto y no se está editando una fila, refrescarlo
+  if(document.getElementById('admin').classList.contains('open')&&(typeof editingIndex==='undefined'||editingIndex===null)){
+    adminRenderList();
+  }
+}
+
+async function fetchPerfumes(isInitial){
+  try{
+    let res=await fetch('/api/perfumes',{cache:'no-store'});
+    let list=await res.json();
+    if(isInitial||snapList(list)!==lastSnapshot)applyServerList(list);
+  }catch(e){
+    if(isInitial){
+      document.querySelector('.products').innerHTML='<div class="empty">No se pudo cargar el catálogo.<br>Recargá la página en unos segundos.</div>';
+    }
+  }
+}
+
+let newImgData=null;let editImgData={};
+function handleImgFile(file,ctx,i){if(!file||!file.type||!file.type.startsWith('image/'))return;let reader=new FileReader();reader.onload=function(e){let img=new Image();img.onload=function(){let maxW=800;let scale=Math.min(1,maxW/img.width);let canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);let dataUrl=canvas.toDataURL('image/jpeg',0.82);if(ctx==='new'){newImgData=dataUrl;document.getElementById('newImgPreview').innerHTML=`<img src="${dataUrl}" class="img-drop-thumb">`}else{editImgData[i]=dataUrl;document.getElementById('eImgPreview'+i).innerHTML=`<img src="${dataUrl}" class="img-drop-thumb">`}};img.src=e.target.result};reader.readAsDataURL(file)}
+function stockClass(s){return s<=0?'out':s<=3?'low':''}
+function addProductCard(p){let d=document.createElement('article');d.className='product';d.dataset.cat=p.cat;d.dataset.name=p.name;d.dataset.price=p.price;d.dataset.img=p.img;d.onclick=()=>openDetail(d);let genderLabel=p.cat==='hombres'?'HOMBRE':p.cat==='mujeres'?'MUJER':'UNISEX';d.innerHTML=`<div class="product-img" style="background-image:url('${p.img}')"></div>${p.stock<=0?'<span class="badge">Sin stock</span>':''}<div class="product-body"><div class="brand">${p.brand||'Perfume importado'}</div><span class="gender-label">${genderLabel}</span><h3>${p.name}</h3><div class="desc">Consultar tamaño</div><div class="price-row"><span class="price">$ ${Number(p.price).toLocaleString('es-AR')}</span><button class="add" onclick="add(this)" ${p.stock<=0?'disabled':''}>+</button></div><span class="stock-tag ${stockClass(p.stock)}">${p.stock<=0?'Sin stock':p.stock+' disponibles'}</span></div>`;document.querySelector('.products').appendChild(d)}
+function renderProducts(){document.querySelector('.products').innerHTML='';perfumes.forEach(addProductCard);applyFilter()}
+
+// Carga inicial + actualización automática cada 30 segundos.
+// Así, cuando agregás un perfume, todas las personas que tengan
+// abierto el catálogo lo ven sin tocar nada más.
+fetchPerfumes(true);
+setInterval(function(){fetchPerfumes(false)},30000);</script><script>
+const fragranceDetails={
+'212 Heroes':['Cítricos · Frutal · Almizcle','Fresco, juvenil y luminoso, con una salida cítrica y un fondo suave y limpio.'],
+'Jadore':['Ylang-ylang · Jazmín · Rosa · Violeta','Floral, elegante y femenino. Huele a flores blancas luminosas con un toque aterciopelado.'],
+'Fame - Parfum':['Mango · Jazmín · Incienso','Dulce y sofisticado, combina una fruta tropical cremosa con flores blancas y un fondo cálido.'],
+'Libre':['Lavanda · Azahar · Vainilla · Cedro','Floral y moderno: comienza fresco por la lavanda y termina cálido, dulce y envolvente.'],
+'Olympéa':['Vainilla salada · Jazmín · Ámbar','Cálido y sensual, mezcla una vainilla cremosa con un punto salado y un fondo ambarado.'],
+'Alien Hypersense':['Pera · Jazmín · Madera de cachemira','Floral intenso y radiante, con un jazmín protagonista y un fondo amaderado suave.'],
+'Rose d’Amalfi':['Rosa · Bergamota · Almizcle','Fresco y delicado, como una rosa limpia acompañada por cítricos y almizcle.'],
+'212 VIP':['Maracuyá · Ron · Gardenia · Vainilla','Dulce, frutal y festivo, con una salida tropical y un fondo cálido de vainilla.'],
+'La Vida es Bella':['Iris · Jazmín · Praliné · Vainilla','Dulce y elegante, recuerda a un caramelo floral con vainilla suave y un fondo cremoso.'],
+'Angel':['Algodón de azúcar · Chocolate · Pachulí','Intenso, dulce y gourmand: chocolate, caramelo y frutas sobre un fondo profundo.'],
+'Narciso Rodriguez For Her':['Rosa · Almizcle · Ámbar · Madera','Limpio, elegante y almizclado, con flores suaves y una base cálida de madera.'],
+'L’Eau Majeure':['Toronja · Madera · Sal marina','Fresco y amaderado, con sensación marina, cítricos y una base limpia.'],
+'CH Sublime':['Frutos rojos · Orquídea · Pachulí','Frutal y femenino, combina frutos rojos con flores y un fondo cálido.'],
+'Nuit d’Issey':['Bergamota · Cuero · Incienso · Pachulí','Oscuro y elegante, con cítricos frescos al inicio y un fondo amaderado y especiado.'],
+'Nina Rouge':['Frambuesa · Gardenia · Caramelo · Vainilla','Dulce y juguetón, huele a frambuesa confitada con flores y caramelo.'],
+'Good Girl EDP':['Almendra · Café · Jazmín · Haba tonka','Sensual y contrastado, mezcla café y almendra con flores blancas y un fondo dulce.'],
+'Good Girl Elixir':['Almendra · Rosa · Vainilla · Cacao','Cálido, dulce e intenso, con rosa y vainilla sobre una base cremosa de cacao.'],
+'Carolina Herrera Very Elixir':['Cereza · Rosa · Vainilla · Cacao','Dulce y seductor, combina frutas oscuras, flores y un fondo avainillado.'],
+'Good Girl Blush Elixir Caja':['Peonía · Vainilla · Cacao · Ylang-ylang','Floral y cremoso, con una dulzura suave y un fondo elegante de vainilla.'],
+'Allure Homme':['Limón · Pimienta · Cedro · Sándalo','Fresco, especiado y masculino, con cítricos al inicio y maderas suaves al final.'],
+'Miss Dior':['Rosa · Peonía · Iris · Maderas','Floral y romántico, huele a rosas frescas con un toque limpio y aterciopelado.'],
+'Chance':['Pimienta rosa · Jazmín · Pachulí · Vainilla','Floral especiado, fresco al comienzo y cálido al secar, con una estela elegante.'],
+'Black XS Nueva':['Arándano · Praliné · Canela · Pachulí','Dulce y rockero, mezcla frutas oscuras, especias y un fondo cálido.'],
+'Burberry Goddess':['Vainilla · Lavanda · Cacao','Vainillado y envolvente, con una lavanda suave que le aporta frescura.'],
+'Thommy':['Cítricos · Manzana · Canela · Maderas','Fresco y juvenil, mezcla frutas y especias con una base amaderada.'],
+'CH Eau de Toilette':['Cítricos · Jazmín · Sándalo · Almizcle','Fresco, floral y limpio, ideal para usar todos los días.'],
+'Armani Mania':['Azafrán · Mandarina · Cedro · Almizcle','Elegante y especiado, con salida cítrica y un fondo amaderado refinado.'],
+'Acqua di Gio Parfum':['Bergamota · Romero · Incienso · Maderas','Acuático y masculino, fresco como el mar y con un fondo profundo de incienso.'],
+'Toy 2 Pearl':['Limón · Jazmín · Almizcle','Fresco, limpio y divertido, con cítricos brillantes y un fondo suave.'],
+'Toy Boy 2':['Pera · Rosa · Pimienta · Ámbar','Floral especiado y moderno, con una salida afrutada y un fondo cálido.'],
+'Eros Energy':['Cítricos · Pimienta rosa · Ámbar · Almizcle','Fresco y vibrante, con cítricos intensos y un fondo cálido y sensual.'],
+'Wanted':['Limón · Jengibre · Cardamomo · Haba tonka','Especiado y atractivo, mezcla cítricos con un fondo dulce y ambarado.'],
+'Million Gold For Her':['Azafrán · Rosa · Pera · Almizcle','Floral, dulce y lujoso, con frutas suaves, rosa y un fondo cálido.'],
+'Boss The Scent':['Jengibre · Maninka · Cuero','Cálido y seductor, con especias frescas, fruta exótica y cuero.'],
+'Dolce Gabbana Intense':['Neroli · Azahar · Lavanda · Almizcle','Floral blanco y elegante, con una sensación limpia, cremosa y envolvente.'],
+'JPG Elixir Absolut':['Lavanda · Miel · Canela · Haba tonka','Dulce, especiado y potente, con miel y canela sobre una base cálida.'],
+'Eau Sauvage':['Limón · Romero · Vetiver · Musgo','Clásico, fresco y elegante, con cítricos verdes y maderas limpias.'],
+'Opium':['Pimienta · Canela · Café · Vainilla','Intenso y oriental, con especias cálidas, café y una vainilla profunda.'],
+'MYSLF':['Bergamota · Azahar · Pachulí · Maderas','Moderno y limpio, combina cítricos con flores blancas y maderas elegantes.'],
+'Valentino Green Stravaganza':['Bergamota · Café · Lavanda','Aromático y fresco, con un toque de café suave y una base limpia.'],
+'Versace Purple':['Frutos rojos · Jazmín · Almizcle','Frutal y floral, dulce pero liviano, con una estela suave y femenina.'],
+'Tom Ford Velvet Orchid':['Ron · Miel · Orquídea · Vainilla','Opulento y cálido, floral oscuro con miel, ron y vainilla.'],
+'Tom Ford Rose Prick':['Rosa · Pimienta · Pachulí','Rosa intensa y especiada, elegante, fresca y con un fondo terroso.'],
+'Bleu de Chanel':['Limón · Incienso · Jengibre · Cedro','Fresco, limpio y sofisticado, con cítricos y maderas profundas.'],
+'Stronger With You':['Castaña · Salvia · Vainilla · Ámbar','Dulce y cálido, con castaña especiada y una vainilla muy envolvente.'],
+'212 VIP Black':['Absenta · Lavanda · Cuero · Almizcle','Aromático y nocturno, fresco al inicio y cálido con un fondo de cuero.'],
+'Bad Boy Le Parfum':['Pimienta · Cannabis · Toronja · Cuero','Intenso y moderno, cítrico y especiado con un fondo oscuro de cuero.'],
+'Daisy Wild':['Banana · Jazmín · Macadamia · Vetiver','Frutal y luminoso, con flores blancas y una sensación fresca y alegre.'],
+'Invictus Victory':['Limón · Incienso · Haba tonka · Ámbar','Fresco, potente y dulce, con cítricos brillantes y un fondo ambarado.'],
+'Invictus Parfum':['Lavanda · Ciprés · Haba tonka · Sándalo','Aromático y elegante, con lavanda fresca y maderas cremosas.'],
+'Bvlgari Glacial Essence':['Bayas de enebro · Sándalo · Jengibre','Fresco y amaderado, con una sensación fría, limpia y sofisticada.'],
+'Gentleman Society Extreme':['Pimienta · Café · Narciso · Vainilla','Elegante y profundo, con café especiado, flores y un fondo de vainilla.'],
+'Issey Miyake':['Yuzu · Loto · Sándalo · Vetiver','Fresco y acuático, con cítricos limpios y maderas transparentes.'],
+'Light Blue EDT H':['Bergamota · Manzana · Romero · Almizcle','Fresco y mediterráneo, cítrico, limpio y muy fácil de usar.'],
+'Polo Ralph':['Pino · Tabaco · Cuero · Musgo','Verde, clásico y masculino, con maderas, tabaco y una base terrosa.'],
+'Paraise Garden':['Coco · Maderas · Vainilla · Sal marina','Fresco y tropical, con un fondo cremoso y una sensación de verano.'],
+'Good Girl Blush EDP':['Peonía · Ylang-ylang · Vainilla','Floral y delicado, con flores suaves y una vainilla cremosa.'],
+'Miss Dior EDT':['Mandarina · Rosa · Jazmín · Pachulí','Fresco y floral, con cítricos luminosos y un fondo elegante.'],
+'Invictus Victory Extreme':['Limón · Pimienta · Incienso · Vainilla','Potente y cálido, con salida cítrica, especias y una base dulce.']};
+function openDetail(el){let p=perfumes.find(x=>x.name===el.dataset.name);let fallback=fragranceDetails[el.dataset.name]||['Aromas seleccionados · Maderas · Almizcle','Una fragancia equilibrada y elegante, con una estela agradable y duradera.'];let notesTxt=(p&&p.notes)?p.notes:fallback[0];let descTxt=(p&&p.desc)?p.desc:fallback[1];let stock=stockFor(el.dataset.name);document.getElementById('detailImg').src=el.dataset.img;document.getElementById('detailName').textContent=el.dataset.name;document.getElementById('detailPrice').textContent='$ '+(+el.dataset.price).toLocaleString('es-AR');document.getElementById('detailNotes').textContent=notesTxt;document.getElementById('detailDesc').textContent=descTxt;let stockEl=document.getElementById('detailStock');stockEl.className=stockClass(stock);stockEl.textContent=stock<=0?'Sin stock disponible':stock+' unidades disponibles';let addBtn=document.getElementById('detailAdd');addBtn.disabled=stock<=0;addBtn.textContent=stock<=0?'Sin stock':'Agregar al pedido +';addBtn.onclick=()=>{if(stock<=0)return;add(el);closeDetail()};document.getElementById('detail').classList.add('open')}
+</script><div class="login-modal" id="login"><div class="login-box"><div class="panel-head"><h2>Acceso privado</h2><button class="close" onclick="closeLogin()">×</button></div><p class="admin-help">Ingresá la contraseña para continuar.</p><input id="adminPassword" class="login-input" type="password" placeholder="Contraseña" onkeydown="if(event.key==='Enter')loginAdmin()"><button class="primary login-submit" onclick="loginAdmin()">Ingresar</button><div id="loginError" class="login-error"></div></div></div><div class="admin-modal" id="admin"><div class="admin-box"><div class="panel-head"><div><div class="kicker">Panel privado</div><h2>Catálogo</h2></div><div><button class="admin-logout" onclick="logoutAdmin()">Cerrar sesión</button><button class="close" onclick="closeAdmin()">×</button></div></div><p class="admin-help">Agregá, editá o eliminá perfumes, y llevá el control del stock. Los cambios se guardan en el servidor: los ven TODAS las personas que tengan el link.</p><div class="admin-form"><input id="newName" placeholder="Nombre del perfume"><input id="newBrand" placeholder="Marca"><select id="newCat"><option value="mujeres">Mujer</option><option value="hombres">Hombre</option><option value="unisex">Unisex</option></select><input id="newPrice" type="number" placeholder="Precio"><input id="newStock" type="number" placeholder="Stock (unidades)"><div class="img-drop" id="newImgDrop" onclick="document.getElementById('newImgFile').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="event.preventDefault();this.classList.remove('dragover');handleImgFile(event.dataTransfer.files[0],'new')"><input type="file" id="newImgFile" accept="image/*" style="display:none" onchange="handleImgFile(this.files[0],'new')"><div id="newImgPreview" class="img-drop-inner">📷 Arrastrá una foto acá o tocá para elegirla</div></div><input id="newImgUrl" placeholder="...o pegá la URL de una imagen (opcional)"><textarea id="newNotes" placeholder="Notas olfativas (ej: Rosa · Vainilla · Almizcle)" rows="2"></textarea><textarea id="newDesc" placeholder="Descripción — ¿a qué huele?" rows="3"></textarea><button class="primary" onclick="adminAdd()">Agregar perfume</button></div><input id="adminSearch" class="admin-search" placeholder="Buscar por nombre o marca..." oninput="editingIndex=null;adminRenderList()"><div id="adminList"></div></div></div><script>// Panel de administración: todas las operaciones van al SERVIDOR.
+document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='a'){e.preventDefault();openAdmin()}});
+
+function adminKey(){return sessionStorage.getItem('elanAdminKey')||''}
+
+function closeLogin(){document.getElementById('login').classList.remove('open')}
+
+async function loginAdmin(){
+  let pwd=document.getElementById('adminPassword').value;
+  try{
+    let res=await fetch('/api/auth',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({key:pwd})});
+    if(res.ok){
+      sessionStorage.elanAdmin='ok';
+      sessionStorage.elanAdminKey=pwd;
+      closeLogin();
+      document.getElementById('loginError').textContent='';
+      document.getElementById('admin').classList.add('open');
+      adminRenderList();
+    }else{
+      document.getElementById('loginError').textContent='Contraseña incorrecta';
+      document.getElementById('adminPassword').value='';
+    }
+  }catch(e){
+    document.getElementById('loginError').textContent='Error de conexión con el servidor';
+  }
+}
+
+function openAdmin(){if(sessionStorage.elanAdmin==='ok'){document.getElementById('admin').classList.add('open');adminRenderList()}else{document.getElementById('login').classList.add('open');setTimeout(()=>document.getElementById('adminPassword').focus(),100)}}
+function closeAdmin(){document.getElementById('admin').classList.remove('open')}
+function logoutAdmin(){sessionStorage.removeItem('elanAdmin');sessionStorage.removeItem('elanAdminKey');closeAdmin()}
+function sessionExpirada(){alert('La sesión de administrador no es válida o la clave cambió. Volvé a ingresar.');logoutAdmin()}
+
+let editingIndex=null;
+function escAttr(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;')}
+function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function adminRenderList(){let q=(document.getElementById('adminSearch').value||'').trim().toLowerCase();let list=document.getElementById('adminList');let rows=perfumes.map((p,i)=>({p,i})).filter(({p})=>!q||p.name.toLowerCase().includes(q)||(p.brand||'').toLowerCase().includes(q));list.innerHTML=rows.length?rows.map(({p,i})=>i===editingIndex?editRowHTML(p,i):viewRowHTML(p,i)).join(''):'<div class="empty">No se encontraron perfumes.</div>'}
+function viewRowHTML(p,i){return `<div class="admin-row"><span>${p.name}<small>${p.brand?p.brand+' · ':''}$ ${Number(p.price).toLocaleString('es-AR')}</small></span><div class="stock-edit"><button onclick="adjustStock(${i},-1)">−</button><b>${p.stock}</b><button onclick="adjustStock(${i},1)">+</button></div><div><button onclick="startEdit(${i})">Editar</button><button onclick="removePerfume(${i})">Quitar</button></div></div>`}
+function editRowHTML(p,i){return `<div class="admin-row admin-row-edit"><input id="eName${i}" value="${escAttr(p.name)}" placeholder="Nombre"><input id="eBrand${i}" value="${escAttr(p.brand)}" placeholder="Marca"><select id="eCat${i}"><option value="mujeres" ${p.cat==='mujeres'?'selected':''}>Mujer</option><option value="hombres" ${p.cat==='hombres'?'selected':''}>Hombre</option><option value="unisex" ${p.cat==='unisex'?'selected':''}>Unisex</option></select><input id="ePrice${i}" type="number" value="${p.price}" placeholder="Precio"><input id="eStock${i}" type="number" value="${p.stock}" placeholder="Stock"><div class="img-drop" id="eImgDrop${i}" onclick="document.getElementById('eImgFile${i}').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="event.preventDefault();this.classList.remove('dragover');handleImgFile(event.dataTransfer.files[0],'edit',${i})"><input type="file" id="eImgFile${i}" accept="image/*" style="display:none" onchange="handleImgFile(this.files[0],'edit',${i})"><div id="eImgPreview${i}" class="img-drop-inner">${p.img?`<img src="${p.img}" class="img-drop-thumb">`:'📷 Arrastrá una foto o tocá para elegirla'}</div></div><input id="eImgUrl${i}" value="" placeholder="...o pegá la URL de una imagen (opcional)"><textarea id="eNotes${i}" placeholder="Notas olfativas" rows="2">${escHtml(p.notes||'')}</textarea><textarea id="eDesc${i}" placeholder="Descripción — ¿a qué huele?" rows="3">${escHtml(p.desc||'')}</textarea><div><button class="primary" onclick="saveEdit(${i})">Guardar</button><button onclick="cancelEdit()">Cancelar</button></div></div>`}
+function startEdit(i){editingIndex=i;adminRenderList()}
+function cancelEdit(){if(editingIndex!==null)delete editImgData[editingIndex];editingIndex=null;adminRenderList()}
+
+async function saveEdit(i){
+  let name=document.getElementById('eName'+i).value.trim();
+  if(!name){alert('El nombre no puede quedar vacío.');return}
+  let brand=document.getElementById('eBrand'+i).value.trim();
+  let cat=document.getElementById('eCat'+i).value;
+  let price=+document.getElementById('ePrice'+i).value||0;
+  let stock=Math.max(0,+document.getElementById('eStock'+i).value||0);
+  let url=document.getElementById('eImgUrl'+i).value.trim();
+  let img=editImgData[i]||url||perfumes[i].img;
+  let notes=document.getElementById('eNotes'+i).value.trim();
+  let desc=document.getElementById('eDesc'+i).value.trim();
+  let id=perfumes[i].id;
+  try{
+    let res=await fetch('/api/perfumes/'+id,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','x-admin-key':adminKey()},
+      body:JSON.stringify({name,brand,cat,price,stock,img,notes,desc})
+    });
+    if(res.status===401){sessionExpirada();return}
+    if(!res.ok){alert('No se pudieron guardar los cambios.');return}
+    let updated=await res.json();
+    let idx=perfumes.findIndex(x=>x.id===id);
+    if(idx>-1)perfumes[idx]=updated;
+    lastSnapshot=snapList(perfumes);
+    delete editImgData[i];
+    editingIndex=null;
+    renderProducts();
+    adminRenderList();
+  }catch(e){
+    alert('Error de conexión. No se guardó el cambio.');
+  }
+}
+
+async function adjustStock(i,delta){
+  let nuevo=Math.max(0,(+perfumes[i].stock||0)+delta);
+  let id=perfumes[i].id;
+  let anterior=perfumes[i].stock;
+  perfumes[i]={...perfumes[i],stock:nuevo};
+  lastSnapshot=snapList(perfumes);
+  renderProducts();
+  adminRenderList();
+  try{
+    let res=await fetch('/api/perfumes/'+id,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json','x-admin-key':adminKey()},
+      body:JSON.stringify({stock:nuevo})
+    });
+    if(res.status===401){sessionExpirada();return}
+    if(!res.ok)throw new Error('bad');
+    let updated=await res.json();
+    let idx=perfumes.findIndex(x=>x.id===id);
+    if(idx>-1)perfumes[idx]=updated;
+    lastSnapshot=snapList(perfumes);
+  }catch(e){
+    let idx=perfumes.findIndex(x=>x.id===id);
+    if(idx>-1)perfumes[idx]={...perfumes[idx],stock:anterior};
+    lastSnapshot=snapList(perfumes);
+    renderProducts();
+    adminRenderList();
+    alert('No se pudo actualizar el stock.');
+  }
+}
+
+async function adminAdd(){
+  let name=document.getElementById('newName').value.trim();
+  if(!name)return;
+  let brand=document.getElementById('newBrand').value.trim();
+  let cat=document.getElementById('newCat').value;
+  let price=+document.getElementById('newPrice').value||0;
+  let stock=+document.getElementById('newStock').value||0;
+  let url=document.getElementById('newImgUrl').value.trim();
+  let img=newImgData||url||'assets/1.png';
+  let notes=document.getElementById('newNotes').value.trim();
+  let desc=document.getElementById('newDesc').value.trim();
+  try{
+    let res=await fetch('/api/perfumes',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-admin-key':adminKey()},
+      body:JSON.stringify({name,brand,cat,price,stock,img,notes,desc})
+    });
+    if(res.status===401){sessionExpirada();return}
+    if(!res.ok){alert('No se pudo agregar el perfume.');return}
+    let creado=await res.json();
+    perfumes.push(creado);
+    lastSnapshot=snapList(perfumes);
+    renderProducts();
+    adminRenderList();
+    ['newName','newBrand','newPrice','newStock','newImgUrl','newNotes','newDesc'].forEach(id=>document.getElementById(id).value='');
+    newImgData=null;
+    document.getElementById('newImgPreview').innerHTML='📷 Arrastrá una foto acá o tocá para elegirla';
+  }catch(e){
+    alert('Error de conexión. No se agregó el perfume.');
+  }
+}
+
+async function removePerfume(i){
+  if(!confirm('¿Quitar "'+perfumes[i].name+'" del catálogo?\nSe eliminará para TODOS los visitantes.'))return;
+  let id=perfumes[i].id;
+  try{
+    let res=await fetch('/api/perfumes/'+id,{method:'DELETE',headers:{'x-admin-key':adminKey()}});
+    if(res.status===401){sessionExpirada();return}
+    if(!res.ok){alert('No se pudo eliminar.');return}
+    perfumes=perfumes.filter(x=>x.id!==id);
+    lastSnapshot=snapList(perfumes);
+    renderProducts();
+    adminRenderList();
+  }catch(e){
+    alert('Error de conexión. No se eliminó.');
+  }
+}</script></body></html>

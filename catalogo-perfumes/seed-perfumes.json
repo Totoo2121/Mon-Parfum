@@ -1,0 +1,582 @@
+[
+ {
+  "name": "212 Heroes",
+  "brand": "CAROLINA HERRERA",
+  "cat": "mujeres",
+  "price": 60000,
+  "stock": 5,
+  "img": "assets/1.png",
+  "notes": "Cítricos · Frutal · Almizcle",
+  "desc": "Fresco, juvenil y luminoso, con una salida cítrica y un fondo suave y limpio."
+ },
+ {
+  "name": "Jadore",
+  "brand": "DIOR",
+  "cat": "mujeres",
+  "price": 55000,
+  "stock": 5,
+  "img": "assets/2.png",
+  "notes": "Ylang-ylang · Jazmín · Rosa · Violeta",
+  "desc": "Floral, elegante y femenino. Huele a flores blancas luminosas con un toque aterciopelado."
+ },
+ {
+  "name": "Fame - Parfum",
+  "brand": "PACO RABANNE",
+  "cat": "mujeres",
+  "price": 55000,
+  "stock": 5,
+  "img": "assets/3.png",
+  "notes": "Mango · Jazmín · Incienso",
+  "desc": "Dulce y sofisticado, combina una fruta tropical cremosa con flores blancas y un fondo cálido."
+ },
+ {
+  "name": "Libre",
+  "brand": "YVES SAINT LAURENT",
+  "cat": "mujeres",
+  "price": 65000,
+  "stock": 0,
+  "img": "assets/4.png",
+  "notes": "Lavanda · Azahar · Vainilla · Cedro",
+  "desc": "Floral y moderno: comienza fresco por la lavanda y termina cálido, dulce y envolvente."
+ },
+ {
+  "name": "Olympéa",
+  "brand": "PACO RABANNE",
+  "cat": "mujeres",
+  "price": 60000,
+  "stock": 0,
+  "img": "assets/5.png",
+  "notes": "Vainilla salada · Jazmín · Ámbar",
+  "desc": "Cálido y sensual, mezcla una vainilla cremosa con un punto salado y un fondo ambarado."
+ },
+ {
+  "name": "Alien Hypersense",
+  "brand": "MUGLER",
+  "cat": "mujeres",
+  "price": 60000,
+  "stock": 5,
+  "img": "assets/6.png",
+  "notes": "Pera · Jazmín · Madera de cachemira",
+  "desc": "Floral intenso y radiante, con un jazmín protagonista y un fondo amaderado suave."
+ },
+ {
+  "name": "Rose d’Amalfi",
+  "brand": "TOM FORD",
+  "cat": "unisex",
+  "price": 125000,
+  "stock": 5,
+  "img": "assets/7.png",
+  "notes": "Rosa · Bergamota · Almizcle",
+  "desc": "Fresco y delicado, como una rosa limpia acompañada por cítricos y almizcle."
+ },
+ {
+  "name": "212 VIP",
+  "brand": "CAROLINA HERRERA",
+  "cat": "mujeres",
+  "price": 60000,
+  "stock": 5,
+  "img": "assets/8.png",
+  "notes": "Maracuyá · Ron · Gardenia · Vainilla",
+  "desc": "Dulce, frutal y festivo, con una salida tropical y un fondo cálido de vainilla."
+ },
+ {
+  "name": "La Vida es Bella",
+  "brand": "LANCOME",
+  "cat": "mujeres",
+  "price": 55000,
+  "stock": 0,
+  "img": "assets/9.png",
+  "notes": "Iris · Jazmín · Praliné · Vainilla",
+  "desc": "Dulce y elegante, recuerda a un caramelo floral con vainilla suave y un fondo cremoso."
+ },
+ {
+  "name": "Angel",
+  "brand": "MUGLER",
+  "cat": "mujeres",
+  "price": 55000,
+  "stock": 5,
+  "img": "assets/10.png",
+  "notes": "Algodón de azúcar · Chocolate · Pachulí",
+  "desc": "Intenso, dulce y gourmand: chocolate, caramelo y frutas sobre un fondo profundo."
+ },
+ {
+  "name": "Narciso Rodriguez For Her",
+  "brand": "NARCISO RODRIGUEZ",
+  "cat": "mujeres",
+  "price": 65000,
+  "stock": 5,
+  "img": "assets/11.png",
+  "notes": "Rosa · Almizcle · Ámbar · Madera",
+  "desc": "Limpio, elegante y almizclado, con flores suaves y una base cálida de madera."
+ },
+ {
+  "name": "L’Eau Majeure",
+  "brand": "ISSEY MIYAKE",
+  "cat": "hombres",
+  "price": 55000,
+  "stock": 5,
+  "img": "assets/12.png",
+  "notes": "Toronja · Madera · Sal marina",
+  "desc": "Fresco y amaderado, con sensación marina, cítricos y una base limpia."
+ },
+ {
+  "name": "CH Sublime",
+  "brand": "CAROLINA HERRERA",
+  "cat": "mujeres",
+  "price": 45000,
+  "stock": 5,
+  "img": "assets/13.png",
+  "notes": "Frutos rojos · Orquídea · Pachulí",
+  "desc": "Frutal y femenino, combina frutos rojos con flores y un fondo cálido."
+ },
+ {
+  "name": "Nuit d’Issey",
+  "brand": "ISSEY MIYAKE",
+  "cat": "hombres",
+  "price": 55000,
+  "stock": 5,
+  "img": "assets/14.png",
+  "notes": "Bergamota · Cuero · Incienso · Pachulí",
+  "desc": "Oscuro y elegante, con cítricos frescos al inicio y un fondo amaderado y especiado."
+ },
+ {
+  "name": "Nina Rouge",
+  "brand": "NINA RICCI",
+  "cat": "mujeres",
+  "price": 77000,
+  "stock": 5,
+  "img": "assets/15.png",
+  "notes": "Frambuesa · Gardenia · Caramelo · Vainilla",
+  "desc": "Dulce y juguetón, huele a frambuesa confitada con flores y caramelo."
+ },
+ {
+  "name": "Good Girl EDP",
+  "brand": "CAROLINA HERRERA",
+  "cat": "mujeres",
+  "price": 85000,
+  "stock": 5,
+  "img": "assets/16.png",
+  "notes": "Almendra · Café · Jazmín · Haba tonka",
+  "desc": "Sensual y contrastado, mezcla café y almendra con flores blancas y un fondo dulce."
+ },
+ {
+  "name": "Good Girl Elixir",
+  "brand": "PACO RABANNE",
+  "cat": "mujeres",
+  "price": 85000,
+  "stock": 5,
+  "img": "assets/17.png",
+  "notes": "Almendra · Rosa · Vainilla · Cacao",
+  "desc": "Cálido, dulce e intenso, con rosa y vainilla sobre una base cremosa de cacao."
+ },
+ {
+  "name": "Carolina Herrera Very Elixir",
+  "brand": "CAROLINA HERRERA",
+  "cat": "mujeres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/18.png",
+  "notes": "Cereza · Rosa · Vainilla · Cacao",
+  "desc": "Dulce y seductor, combina frutas oscuras, flores y un fondo avainillado."
+ },
+ {
+  "name": "Allure Homme",
+  "brand": "CHANEL",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/19.png",
+  "notes": "Limón · Pimienta · Cedro · Sándalo",
+  "desc": "Fresco, especiado y masculino, con cítricos al inicio y maderas suaves al final."
+ },
+ {
+  "name": "Miss Dior",
+  "brand": "DIOR",
+  "cat": "mujeres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/20.png",
+  "notes": "Rosa · Peonía · Iris · Maderas",
+  "desc": "Floral y romántico, huele a rosas frescas con un toque limpio y aterciopelado."
+ },
+ {
+  "name": "Chance",
+  "brand": "CHANEL",
+  "cat": "mujeres",
+  "price": 77000,
+  "stock": 5,
+  "img": "assets/21.png",
+  "notes": "Pimienta rosa · Jazmín · Pachulí · Vainilla",
+  "desc": "Floral especiado, fresco al comienzo y cálido al secar, con una estela elegante."
+ },
+ {
+  "name": "Black XS Nueva",
+  "brand": "PACO RABANNE",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/22.png",
+  "notes": "Arándano · Praliné · Canela · Pachulí",
+  "desc": "Dulce y rockero, mezcla frutas oscuras, especias y un fondo cálido."
+ },
+ {
+  "name": "Burberry Goddess",
+  "brand": "BURBERRY",
+  "cat": "mujeres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/23.png",
+  "notes": "Vainilla · Lavanda · Cacao",
+  "desc": "Vainillado y envolvente, con una lavanda suave que le aporta frescura."
+ },
+ {
+  "name": "Thommy",
+  "brand": "THOMMY",
+  "cat": "hombres",
+  "price": 45000,
+  "stock": 5,
+  "img": "assets/24.png",
+  "notes": "Cítricos · Manzana · Canela · Maderas",
+  "desc": "Fresco y juvenil, mezcla frutas y especias con una base amaderada."
+ },
+ {
+  "name": "CH Eau de Toilette",
+  "brand": "CAROLINA HERRERA",
+  "cat": "mujeres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/25.png",
+  "notes": "Cítricos · Jazmín · Sándalo · Almizcle",
+  "desc": "Fresco, floral y limpio, ideal para usar todos los días."
+ },
+ {
+  "name": "Armani Mania",
+  "brand": "GIORGIO ARMANI",
+  "cat": "hombres",
+  "price": 75000,
+  "stock": 5,
+  "img": "assets/26.png",
+  "notes": "Azafrán · Mandarina · Cedro · Almizcle",
+  "desc": "Elegante y especiado, con salida cítrica y un fondo amaderado refinado."
+ },
+ {
+  "name": "Acqua di Gio Parfum",
+  "brand": "GIORGIO ARMANI",
+  "cat": "hombres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/27.png",
+  "notes": "Bergamota · Romero · Incienso · Maderas",
+  "desc": "Acuático y masculino, fresco como el mar y con un fondo profundo de incienso."
+ },
+ {
+  "name": "Toy 2 Pearl",
+  "brand": "MOSCHINO",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/28.png",
+  "notes": "Limón · Jazmín · Almizcle",
+  "desc": "Fresco, limpio y divertido, con cítricos brillantes y un fondo suave."
+ },
+ {
+  "name": "Toy Boy 2",
+  "brand": "MOSCHINO",
+  "cat": "hombres",
+  "price": 93000,
+  "stock": 5,
+  "img": "assets/29.png",
+  "notes": "Pera · Rosa · Pimienta · Ámbar",
+  "desc": "Floral especiado y moderno, con una salida afrutada y un fondo cálido."
+ },
+ {
+  "name": "Eros Energy",
+  "brand": "VERSACE",
+  "cat": "hombres",
+  "price": 95000,
+  "stock": 5,
+  "img": "assets/30.png",
+  "notes": "Cítricos · Pimienta rosa · Ámbar · Almizcle",
+  "desc": "Fresco y vibrante, con cítricos intensos y un fondo cálido y sensual."
+ },
+ {
+  "name": "Wanted",
+  "brand": "AZZARO",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/31.png",
+  "notes": "Limón · Jengibre · Cardamomo · Haba tonka",
+  "desc": "Especiado y atractivo, mezcla cítricos con un fondo dulce y ambarado."
+ },
+ {
+  "name": "Acqua di Gio Parfum",
+  "brand": "GIORGIO ARMANI",
+  "cat": "mujeres",
+  "price": 85000,
+  "stock": 0,
+  "img": "assets/32.png",
+  "notes": "Bergamota · Romero · Incienso · Maderas",
+  "desc": "Acuático y masculino, fresco como el mar y con un fondo profundo de incienso."
+ },
+ {
+  "name": "Million Gold For Her",
+  "brand": "PACO RABANNE",
+  "cat": "mujeres",
+  "price": 85000,
+  "stock": 0,
+  "img": "assets/33.png",
+  "notes": "Azafrán · Rosa · Pera · Almizcle",
+  "desc": "Floral, dulce y lujoso, con frutas suaves, rosa y un fondo cálido."
+ },
+ {
+  "name": "Boss The Scent",
+  "brand": "HUGO BOSS",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/34.png",
+  "notes": "Jengibre · Maninka · Cuero",
+  "desc": "Cálido y seductor, con especias frescas, fruta exótica y cuero."
+ },
+ {
+  "name": "Dolce Gabbana Intense",
+  "brand": "DOLCE GABBANA",
+  "cat": "hombres",
+  "price": 87000,
+  "stock": 0,
+  "img": "assets/35.png",
+  "notes": "Neroli · Azahar · Lavanda · Almizcle",
+  "desc": "Floral blanco y elegante, con una sensación limpia, cremosa y envolvente."
+ },
+ {
+  "name": "JPG Elixir Absolut",
+  "brand": "JPG",
+  "cat": "hombres",
+  "price": 130000,
+  "stock": 5,
+  "img": "assets/36.png",
+  "notes": "Lavanda · Miel · Canela · Haba tonka",
+  "desc": "Dulce, especiado y potente, con miel y canela sobre una base cálida."
+ },
+ {
+  "name": "Eau Sauvage",
+  "brand": "DIOR",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/37.png",
+  "notes": "Limón · Romero · Vetiver · Musgo",
+  "desc": "Clásico, fresco y elegante, con cítricos verdes y maderas limpias."
+ },
+ {
+  "name": "Opium",
+  "brand": "YVES SAINT LAURENT",
+  "cat": "mujeres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/38.png",
+  "notes": "Pimienta · Canela · Café · Vainilla",
+  "desc": "Intenso y oriental, con especias cálidas, café y una vainilla profunda."
+ },
+ {
+  "name": "MYSLF",
+  "brand": "YVES SAINT LAURENT",
+  "cat": "hombres",
+  "price": 110000,
+  "stock": 5,
+  "img": "assets/39.png",
+  "notes": "Bergamota · Azahar · Pachulí · Maderas",
+  "desc": "Moderno y limpio, combina cítricos con flores blancas y maderas elegantes."
+ },
+ {
+  "name": "Valentino Green Stravaganza",
+  "brand": "VALENTINO",
+  "cat": "mujeres",
+  "price": 16000,
+  "stock": 5,
+  "img": "assets/40.png",
+  "notes": "Bergamota · Café · Lavanda",
+  "desc": "Aromático y fresco, con un toque de café suave y una base limpia."
+ },
+ {
+  "name": "Versace Purple",
+  "brand": "VERSACE",
+  "cat": "mujeres",
+  "price": 81000,
+  "stock": 5,
+  "img": "assets/41.png",
+  "notes": "Frutos rojos · Jazmín · Almizcle",
+  "desc": "Frutal y floral, dulce pero liviano, con una estela suave y femenina."
+ },
+ {
+  "name": "Tom Ford Velvet Orchid",
+  "brand": "TOM FORD",
+  "cat": "unisex",
+  "price": 96000,
+  "stock": 5,
+  "img": "assets/42.png",
+  "notes": "Ron · Miel · Orquídea · Vainilla",
+  "desc": "Opulento y cálido, floral oscuro con miel, ron y vainilla."
+ },
+ {
+  "name": "Tom Ford Rose Prick",
+  "brand": "TOM FORD",
+  "cat": "unisex",
+  "price": 130000,
+  "stock": 5,
+  "img": "assets/43.png",
+  "notes": "Rosa · Pimienta · Pachulí",
+  "desc": "Rosa intensa y especiada, elegante, fresca y con un fondo terroso."
+ },
+ {
+  "name": "Bleu de Chanel",
+  "brand": "CHANEL",
+  "cat": "hombres",
+  "price": 96000,
+  "stock": 5,
+  "img": "assets/44.png",
+  "notes": "Limón · Incienso · Jengibre · Cedro",
+  "desc": "Fresco, limpio y sofisticado, con cítricos y maderas profundas."
+ },
+ {
+  "name": "Stronger With You",
+  "brand": "GIORGIO ARMANI",
+  "cat": "hombres",
+  "price": 120000,
+  "stock": 5,
+  "img": "assets/45.png",
+  "notes": "Castaña · Salvia · Vainilla · Ámbar",
+  "desc": "Dulce y cálido, con castaña especiada y una vainilla muy envolvente."
+ },
+ {
+  "name": "212 VIP Black",
+  "brand": "CAROLINA HERRERA",
+  "cat": "hombres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/46.png",
+  "notes": "Absenta · Lavanda · Cuero · Almizcle",
+  "desc": "Aromático y nocturno, fresco al inicio y cálido con un fondo de cuero."
+ },
+ {
+  "name": "Bad Boy Le Parfum",
+  "brand": "CAROLINA HERRERA",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/47.png",
+  "notes": "Pimienta · Cannabis · Toronja · Cuero",
+  "desc": "Intenso y moderno, cítrico y especiado con un fondo oscuro de cuero."
+ },
+ {
+  "name": "Daisy Wild",
+  "brand": "MARC JACOBS",
+  "cat": "mujeres",
+  "price": 85000,
+  "stock": 5,
+  "img": "assets/48.png",
+  "notes": "Banana · Jazmín · Macadamia · Vetiver",
+  "desc": "Frutal y luminoso, con flores blancas y una sensación fresca y alegre."
+ },
+ {
+  "name": "Invictus Victory",
+  "brand": "PACO RABANNE",
+  "cat": "hombres",
+  "price": 75000,
+  "stock": 5,
+  "img": "assets/49.png",
+  "notes": "Limón · Incienso · Haba tonka · Ámbar",
+  "desc": "Fresco, potente y dulce, con cítricos brillantes y un fondo ambarado."
+ },
+ {
+  "name": "Invictus Parfum",
+  "brand": "PACO RABANNE",
+  "cat": "hombres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/50.png",
+  "notes": "Lavanda · Ciprés · Haba tonka · Sándalo",
+  "desc": "Aromático y elegante, con lavanda fresca y maderas cremosas."
+ },
+ {
+  "name": "Bvlgari Glacial Essence",
+  "brand": "BVLGARI",
+  "cat": "hombres",
+  "price": 81000,
+  "stock": 5,
+  "img": "assets/51.png",
+  "notes": "Bayas de enebro · Sándalo · Jengibre",
+  "desc": "Fresco y amaderado, con una sensación fría, limpia y sofisticada."
+ },
+ {
+  "name": "Gentleman Society Extreme",
+  "brand": "GIVENCHY",
+  "cat": "hombres",
+  "price": 96000,
+  "stock": 5,
+  "img": "assets/52.png",
+  "notes": "Pimienta · Café · Narciso · Vainilla",
+  "desc": "Elegante y profundo, con café especiado, flores y un fondo de vainilla."
+ },
+ {
+  "name": "Issey Miyake",
+  "brand": "ISSEY MIYAKE",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/53.png",
+  "notes": "Yuzu · Loto · Sándalo · Vetiver",
+  "desc": "Fresco y acuático, con cítricos limpios y maderas transparentes."
+ },
+ {
+  "name": "Light Blue EDT H",
+  "brand": "DOLCE GABBANA",
+  "cat": "hombres",
+  "price": 83000,
+  "stock": 5,
+  "img": "assets/54.png",
+  "notes": "Bergamota · Manzana · Romero · Almizcle",
+  "desc": "Fresco y mediterráneo, cítrico, limpio y muy fácil de usar."
+ },
+ {
+  "name": "Polo Ralph",
+  "brand": "RALPH LAUREN",
+  "cat": "hombres",
+  "price": 87000,
+  "stock": 5,
+  "img": "assets/55.png",
+  "notes": "Pino · Tabaco · Cuero · Musgo",
+  "desc": "Verde, clásico y masculino, con maderas, tabaco y una base terrosa."
+ },
+ {
+  "name": "Paraise Garden",
+  "brand": "JPG",
+  "cat": "hombres",
+  "price": 95000,
+  "stock": 5,
+  "img": "assets/56.png",
+  "notes": "Coco · Maderas · Vainilla · Sal marina",
+  "desc": "Fresco y tropical, con un fondo cremoso y una sensación de verano."
+ },
+ {
+  "name": "Good Girl Blush EDP",
+  "brand": "PACO RABANNE",
+  "cat": "mujeres",
+  "price": 95000,
+  "stock": 0,
+  "img": "assets/57.png",
+  "notes": "Peonía · Ylang-ylang · Vainilla",
+  "desc": "Floral y delicado, con flores suaves y una vainilla cremosa."
+ },
+ {
+  "name": "Invictus Victory Extreme",
+  "brand": "PACO RABANNE",
+  "cat": "hombres",
+  "price": 93000,
+  "stock": 5,
+  "img": "assets/58.png",
+  "notes": "Limón · Pimienta · Incienso · Vainilla",
+  "desc": "Potente y cálido, con salida cítrica, especias y una base dulce."
+ }
+]
