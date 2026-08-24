@@ -54,7 +54,7 @@ async function fetchPerfumes(isInitial){
 
 let newImgData=null;let editImgData={};
 function handleImgFile(file,ctx,i){if(!file||!file.type||!file.type.startsWith('image/'))return;let reader=new FileReader();reader.onload=function(e){let img=new Image();img.onload=function(){let maxW=800;let scale=Math.min(1,maxW/img.width);let canvas=document.createElement('canvas');canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext('2d').drawImage(img,0,0,canvas.width,canvas.height);let dataUrl=canvas.toDataURL('image/jpeg',0.82);if(ctx==='new'){newImgData=dataUrl;document.getElementById('newImgPreview').innerHTML=`<img src="${dataUrl}" class="img-drop-thumb">`}else{editImgData[i]=dataUrl;document.getElementById('eImgPreview'+i).innerHTML=`<img src="${dataUrl}" class="img-drop-thumb">`}};img.src=e.target.result};reader.readAsDataURL(file)}
-function stockClass(s){return s<=0?'out':s<=3?'low':''}
+
 function addProductCard(p){let d=document.createElement('article');d.className='product';d.dataset.cat=p.cat;d.dataset.name=p.name;d.dataset.price=p.price;d.dataset.img=p.img;d.onclick=()=>openDetail(d);let genderLabel=p.cat==='hombres'?'HOMBRE':p.cat==='mujeres'?'MUJER':'UNISEX';d.innerHTML=`<div class="product-img" style="background-image:url('${p.img}')"></div><div class="product-body"><div class="brand">${p.brand||'Perfume importado'}</div><span class="gender-label">${genderLabel}</span><h3>${p.name}</h3><div class="desc">Consultar tamaño</div><div class="price-row"><span class="price">$ ${Number(p.price).toLocaleString('es-AR')}</span><button class="add" onclick="add(this)">+</button></div><span class="stock-tag">En stock</span></div>`;document.querySelector('.products').appendChild(d)}
 function renderProducts(){document.querySelector('.products').innerHTML='';perfumes.forEach(addProductCard);applyFilter()}
 
@@ -124,7 +124,7 @@ const fragranceDetails={
 'Miss Dior EDT':['Mandarina · Rosa · Jazmín · Pachulí','Fresco y floral, con cítricos luminosos y un fondo elegante.'],
 'Invictus Victory Extreme':['Limón · Pimienta · Incienso · Vainilla','Potente y cálido, con salida cítrica, especias y una base dulce.']};
 function openDetail(el){let p=perfumes.find(x=>x.name===el.dataset.name);let fallback=fragranceDetails[el.dataset.name]||['Aromas seleccionados · Maderas · Almizcle','Una fragancia equilibrada y elegante, con una estela agradable y duradera.'];let notesTxt=(p&&p.notes)?p.notes:fallback[0];let descTxt=(p&&p.desc)?p.desc:fallback[1];let stock=stockFor(el.dataset.name);document.getElementById('detailImg').src=el.dataset.img;document.getElementById('detailName').textContent=el.dataset.name;document.getElementById('detailPrice').textContent='$ '+(+el.dataset.price).toLocaleString('es-AR');document.getElementById('detailNotes').textContent=notesTxt;document.getElementById('detailDesc').textContent=descTxt;let stockEl=document.getElementById('detailStock');stockEl.className='';stockEl.textContent='En stock — disponible para pedido';let addBtn=document.getElementById('detailAdd');addBtn.disabled=false;addBtn.textContent='Agregar al pedido +';addBtn.onclick=()=>{add(el);closeDetail()};document.getElementById('detail').classList.add('open')}
-</script><div class="login-modal" id="login"><div class="login-box"><div class="panel-head"><h2>Acceso privado</h2><button class="close" onclick="closeLogin()">×</button></div><p class="admin-help">Ingresá la contraseña para continuar.</p><input id="adminPassword" class="login-input" type="password" placeholder="Contraseña" onkeydown="if(event.key==='Enter')loginAdmin()"><button class="primary login-submit" onclick="loginAdmin()">Ingresar</button><div id="loginError" class="login-error"></div></div></div><div class="admin-modal" id="admin"><div class="admin-box"><div class="panel-head"><div><div class="kicker">Panel privado</div><h2>Catálogo</h2></div><div><button class="admin-logout" onclick="logoutAdmin()">Cerrar sesión</button><button class="close" onclick="closeAdmin()">×</button></div></div><p class="admin-help">Agregá, editá o eliminá perfumes, y llevá el control del stock. Los cambios se guardan en el servidor: los ven TODAS las personas que tengan el link.</p><p class="admin-msg" id="adminMsg"></p><div class="admin-form"><input id="newName" placeholder="Nombre del perfume"><input id="newBrand" placeholder="Marca"><select id="newCat"><option value="mujeres">Mujer</option><option value="hombres">Hombre</option><option value="unisex">Unisex</option></select><input id="newPrice" type="number" placeholder="Precio"><input id="newStock" type="number" placeholder="Stock (unidades)"><div class="img-drop" id="newImgDrop" onclick="document.getElementById('newImgFile').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="event.preventDefault();this.classList.remove('dragover');handleImgFile(event.dataTransfer.files[0],'new')"><input type="file" id="newImgFile" accept="image/*" style="display:none" onchange="handleImgFile(this.files[0],'new')"><div id="newImgPreview" class="img-drop-inner">📷 Arrastrá una foto acá o tocá para elegirla</div></div><input id="newImgUrl" placeholder="...o pegá la URL de una imagen (opcional)"><textarea id="newNotes" placeholder="Notas olfativas (ej: Rosa · Vainilla · Almizcle)" rows="2"></textarea><textarea id="newDesc" placeholder="Descripción — ¿a qué huele?" rows="3"></textarea><button class="primary" onclick="adminAdd()">Agregar perfume</button></div><input id="adminSearch" class="admin-search" placeholder="Buscar por nombre o marca..." oninput="editingIndex=null;adminRenderList()"><div id="adminList"></div></div></div><script>// Panel de administración: todas las operaciones van al SERVIDOR.
+</script><div class="login-modal" id="login"><div class="login-box"><div class="panel-head"><h2>Acceso privado</h2><button class="close" onclick="closeLogin()">×</button></div><p class="admin-help">Ingresá la contraseña para continuar.</p><input id="adminPassword" class="login-input" type="password" placeholder="Contraseña" onkeydown="if(event.key==='Enter')loginAdmin()"><button class="primary login-submit" onclick="loginAdmin()">Ingresar</button><div id="loginError" class="login-error"></div></div></div><div class="admin-modal" id="admin"><div class="admin-box"><div class="panel-head"><div><div class="kicker">Panel privado</div><h2>Catálogo</h2></div><div><button class="admin-logout" onclick="logoutAdmin()">Cerrar sesión</button><button class="close" onclick="closeAdmin()">×</button></div></div><p class="admin-help">Agregá, editá o eliminá perfumes. Los cambios se guardan en el servidor: los ven TODAS las personas que tengan el link.</p><p class="admin-msg" id="adminMsg"></p><div class="admin-form"><input id="newName" placeholder="Nombre del perfume"><input id="newBrand" placeholder="Marca"><select id="newCat"><option value="mujeres">Mujer</option><option value="hombres">Hombre</option><option value="unisex">Unisex</option></select><input id="newPrice" type="number" placeholder="Precio"><div class="img-drop" id="newImgDrop" onclick="document.getElementById('newImgFile').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="event.preventDefault();this.classList.remove('dragover');handleImgFile(event.dataTransfer.files[0],'new')"><input type="file" id="newImgFile" accept="image/*" style="display:none" onchange="handleImgFile(this.files[0],'new')"><div id="newImgPreview" class="img-drop-inner">📷 Arrastrá una foto acá o tocá para elegirla</div></div><textarea id="newNotes" placeholder="Notas olfativas (ej: Rosa · Vainilla · Almizcle)" rows="2"></textarea><textarea id="newDesc" placeholder="Descripción — ¿a qué huele?" rows="3"></textarea><button class="primary" onclick="adminAdd()">Agregar perfume</button></div><input id="adminSearch" class="admin-search" placeholder="Buscar por nombre o marca..." oninput="editingIndex=null;adminRenderList()"><div id="adminList"></div></div></div><script>// Panel de administración: todas las operaciones van al SERVIDOR.
 document.addEventListener('keydown',e=>{if(e.ctrlKey&&e.shiftKey&&e.key.toLowerCase()==='a'){e.preventDefault();openAdmin()}});
 
 function adminKey(){return sessionStorage.getItem('elanAdminKey')||''}
@@ -162,8 +162,8 @@ let editingIndex=null;
 function escAttr(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;')}
 function escHtml(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
 function adminRenderList(){let q=(document.getElementById('adminSearch').value||'').trim().toLowerCase();let list=document.getElementById('adminList');let rows=perfumes.map((p,i)=>({p,i})).filter(({p})=>!q||p.name.toLowerCase().includes(q)||(p.brand||'').toLowerCase().includes(q));list.innerHTML=rows.length?rows.map(({p,i})=>i===editingIndex?editRowHTML(p,i):viewRowHTML(p,i)).join(''):'<div class="empty">No se encontraron perfumes.</div>'}
-function viewRowHTML(p,i){return `<div class="admin-row"><span>${p.name}<small>${p.brand?p.brand+' · ':''}$ ${Number(p.price).toLocaleString('es-AR')}</small></span><div class="stock-edit"><button onclick="adjustStock(${i},-1)">−</button><b>${p.stock}</b><button onclick="adjustStock(${i},1)">+</button></div><div><button onclick="startEdit(${i})">Editar</button><button onclick="removePerfume(${i})">Quitar</button></div></div>`}
-function editRowHTML(p,i){return `<div class="admin-row admin-row-edit"><input id="eName${i}" value="${escAttr(p.name)}" placeholder="Nombre"><input id="eBrand${i}" value="${escAttr(p.brand)}" placeholder="Marca"><select id="eCat${i}"><option value="mujeres" ${p.cat==='mujeres'?'selected':''}>Mujer</option><option value="hombres" ${p.cat==='hombres'?'selected':''}>Hombre</option><option value="unisex" ${p.cat==='unisex'?'selected':''}>Unisex</option></select><input id="ePrice${i}" type="number" value="${p.price}" placeholder="Precio"><input id="eStock${i}" type="number" value="${p.stock}" placeholder="Stock"><div class="img-drop" id="eImgDrop${i}" onclick="document.getElementById('eImgFile${i}').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="event.preventDefault();this.classList.remove('dragover');handleImgFile(event.dataTransfer.files[0],'edit',${i})"><input type="file" id="eImgFile${i}" accept="image/*" style="display:none" onchange="handleImgFile(this.files[0],'edit',${i})"><div id="eImgPreview${i}" class="img-drop-inner">${p.img?`<img src="${p.img}" class="img-drop-thumb">`:'📷 Arrastrá una foto o tocá para elegirla'}</div></div><input id="eImgUrl${i}" value="" placeholder="...o pegá la URL de una imagen (opcional)"><textarea id="eNotes${i}" placeholder="Notas olfativas" rows="2">${escHtml(p.notes||'')}</textarea><textarea id="eDesc${i}" placeholder="Descripción — ¿a qué huele?" rows="3">${escHtml(p.desc||'')}</textarea><div><button class="primary" onclick="saveEdit(${i})">Guardar</button><button onclick="cancelEdit()">Cancelar</button></div></div>`}
+function viewRowHTML(p,i){return `<div class="admin-row"><span>${p.name}<small>${p.brand?p.brand+' · ':''}$ ${Number(p.price).toLocaleString('es-AR')}</small></span><div><button onclick="startEdit(${i})">Editar</button><button onclick="removePerfume(${i})">Quitar</button></div></div>`}
+function editRowHTML(p,i){return `<div class="admin-row admin-row-edit"><input id="eName${i}" value="${escAttr(p.name)}" placeholder="Nombre"><input id="eBrand${i}" value="${escAttr(p.brand)}" placeholder="Marca"><select id="eCat${i}"><option value="mujeres" ${p.cat==='mujeres'?'selected':''}>Mujer</option><option value="hombres" ${p.cat==='hombres'?'selected':''}>Hombre</option><option value="unisex" ${p.cat==='unisex'?'selected':''}>Unisex</option></select><input id="ePrice${i}" type="number" value="${p.price}" placeholder="Precio"><div class="img-drop" id="eImgDrop${i}" onclick="document.getElementById('eImgFile${i}').click()" ondragover="event.preventDefault();this.classList.add('dragover')" ondragleave="this.classList.remove('dragover')" ondrop="event.preventDefault();this.classList.remove('dragover');handleImgFile(event.dataTransfer.files[0],'edit',${i})"><input type="file" id="eImgFile${i}" accept="image/*" style="display:none" onchange="handleImgFile(this.files[0],'edit',${i})"><div id="eImgPreview${i}" class="img-drop-inner">${p.img?`<img src="${p.img}" class="img-drop-thumb">`:'📷 Arrastrá una foto o tocá para elegirla'}</div></div><textarea id="eNotes${i}" placeholder="Notas olfativas" rows="2">${escHtml(p.notes||'')}</textarea><textarea id="eDesc${i}" placeholder="Descripción — ¿a qué huele?" rows="3">${escHtml(p.desc||'')}</textarea><div><button class="primary" onclick="saveEdit(${i})">Guardar</button><button onclick="cancelEdit()">Cancelar</button></div></div>`}
 function startEdit(i){editingIndex=i;adminRenderList()}
 function cancelEdit(){if(editingIndex!==null)delete editImgData[editingIndex];editingIndex=null;adminRenderList()}
 
@@ -173,9 +173,7 @@ async function saveEdit(i){
   let brand=document.getElementById('eBrand'+i).value.trim();
   let cat=document.getElementById('eCat'+i).value;
   let price=+document.getElementById('ePrice'+i).value||0;
-  let stock=Math.max(0,+document.getElementById('eStock'+i).value||0);
-  let url=document.getElementById('eImgUrl'+i).value.trim();
-  let img=editImgData[i]||url||perfumes[i].img;
+  let img=editImgData[i]||perfumes[i].img;
   let notes=document.getElementById('eNotes'+i).value.trim();
   let desc=document.getElementById('eDesc'+i).value.trim();
   let id=perfumes[i].id;
@@ -183,7 +181,7 @@ async function saveEdit(i){
     let res=await fetch('/api/perfumes/'+id,{
       method:'PUT',
       headers:{'Content-Type':'application/json','x-admin-key':adminKey()},
-      body:JSON.stringify({name,brand,cat,price,stock,img,notes,desc})
+      body:JSON.stringify({name,brand,cat,price,img,notes,desc})
     });
     if(res.status===401){sessionExpirada();return}
     if(!res.ok){alert('No se pudieron guardar los cambios.');return}
@@ -201,35 +199,6 @@ async function saveEdit(i){
   }
 }
 
-async function adjustStock(i,delta){
-  let nuevo=Math.max(0,(+perfumes[i].stock||0)+delta);
-  let id=perfumes[i].id;
-  let anterior=perfumes[i].stock;
-  perfumes[i]={...perfumes[i],stock:nuevo};
-  lastSnapshot=snapList(perfumes);
-  renderProducts();
-  adminRenderList();
-  try{
-    let res=await fetch('/api/perfumes/'+id,{
-      method:'PUT',
-      headers:{'Content-Type':'application/json','x-admin-key':adminKey()},
-      body:JSON.stringify({stock:nuevo})
-    });
-    if(res.status===401){sessionExpirada();return}
-    if(!res.ok)throw new Error('bad');
-    let updated=await res.json();
-    let idx=perfumes.findIndex(x=>x.id===id);
-    if(idx>-1)perfumes[idx]=updated;
-    lastSnapshot=snapList(perfumes);
-  }catch(e){
-    let idx=perfumes.findIndex(x=>x.id===id);
-    if(idx>-1)perfumes[idx]={...perfumes[idx],stock:anterior};
-    lastSnapshot=snapList(perfumes);
-    renderProducts();
-    adminRenderList();
-    alert('No se pudo actualizar el stock.');
-  }
-}
 
 async function adminAdd(){
   let name=document.getElementById('newName').value.trim();
@@ -237,16 +206,14 @@ async function adminAdd(){
   let brand=document.getElementById('newBrand').value.trim();
   let cat=document.getElementById('newCat').value;
   let price=+document.getElementById('newPrice').value||0;
-  let stock=+document.getElementById('newStock').value||0;
-  let url=document.getElementById('newImgUrl').value.trim();
-  let img=newImgData||url||'assets/1.png';
+  let img=newImgData||'assets/1.png';
   let notes=document.getElementById('newNotes').value.trim();
   let desc=document.getElementById('newDesc').value.trim();
   try{
     let res=await fetch('/api/perfumes',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-admin-key':adminKey()},
-      body:JSON.stringify({name,brand,cat,price,stock,img,notes,desc})
+      body:JSON.stringify({name,brand,cat,price,img,notes,desc})
     });
     if(res.status===401){sessionExpirada();return}
     if(!res.ok){alert('No se pudo agregar el perfume.');return}
@@ -255,7 +222,7 @@ async function adminAdd(){
     lastSnapshot=snapList(perfumes);
     renderProducts();
     adminRenderList();
-    ['newName','newBrand','newPrice','newStock','newImgUrl','newNotes','newDesc'].forEach(id=>document.getElementById(id).value='');
+    ['newName','newBrand','newPrice','newNotes','newDesc'].forEach(id=>document.getElementById(id).value='');
     newImgData=null;
     document.getElementById('newImgPreview').innerHTML='📷 Arrastrá una foto acá o tocá para elegirla';
     adminMsg('✔ Se cargó el perfume correctamente: '+name);
@@ -279,4 +246,4 @@ async function removePerfume(i){
   }catch(e){
     alert('Error de conexión. No se eliminó.');
   }
-}</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a3054b29bc9fe53a',t:'MTc4NzYwNTMwMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+}</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a305587bce787a90',t:'MTc4NzYwNTg0Ng=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
