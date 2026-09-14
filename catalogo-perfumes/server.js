@@ -23,7 +23,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const ADMIN_KEY = process.env.ADMIN_KEY || 'admin123';
 const DATA_DIR = process.env.DATA_DIR || path.join(__dirname, 'data');
-const CATS = ['mujeres', 'hombres', 'unisex'];
+const CATS = ['mujeres', 'hombres', 'unisex', 'arabes'];
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
